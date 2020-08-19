@@ -1,0 +1,24 @@
+import {connect} from 'react-redux'
+import ProductAdd from '../ProductAdd'
+
+const mapStateToProps = (state) => {
+  return {
+    keys: Object.keys(state.categories),
+    categories: state.categories
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    addProduct: (product) => {
+      product.id = Date.now()
+      product.
+      dispatch({
+        type: 'ADD_PRODUCT',
+        payload: product
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(ProductAdd)

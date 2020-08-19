@@ -1,0 +1,11 @@
+{
+  "products":{
+    "id": "3562143125784682734",
+    "name": "AIr Jordan 1",
+    "price": "345 $",
+    "category": {
+      "id": "2135412642837212401",
+      "name": "Shoes"
+    }
+  }
+}
