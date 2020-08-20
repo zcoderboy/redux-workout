@@ -36,17 +36,17 @@ const ProductAdd = ({keys,categories,addProduct}) => {
       }}>
         <input style={{
           marginBottom: "10px"
-        }} type="text" name="name" placeholder="Name" onChange={ (event) => handleChange(event) }></input>
+        }} type="text" name="name" required placeholder="Name" onChange={ (event) => handleChange(event) }></input>
         <input style={{
           marginBottom: "10px"
-        }} type="number" name="price" placeholder="Price" onChange={ (event) => handleChange(event) }></input>
+        }} type="number" name="price" required placeholder="Price" onChange={ (event) => handleChange(event) }></input>
         <select style={{
           marginBottom: "10px"
-        }} name="category" onChange={ (event) => handleChange(event) }>
+        }} name="category" required onChange={ (event) => handleChange(event) }>
           {
-            keys.map(key=>{
+            keys.map((key,index)=>{
               return(
-                <option key={key} value={key}>{categories[key].name}</option>
+                <option selected key={key} value={key}>{categories[key].name}</option>
               )
             })
           }
